@@ -13,7 +13,7 @@
 
 ---
 
-## 🎯 Sobre mim
+##  Sobre mim
 
 <table>
 <tr>
@@ -53,9 +53,9 @@ const joao = {
 </tr>
 </table>
 
-> 💬 *"Qualquer tolo escreve código que um computador entende. Bons programadores escrevem código que humanos entendem."* — **Martin Fowler**
+>  *"Qualquer tolo escreve código que um computador entende. Bons programadores escrevem código que humanos entendem."* — **Martin Fowler**
 
-> 🎓 Antes de programar, fui **redator e professor**. Por isso gosto de código claro e de explicar soluções técnicas de um jeito que todo mundo entende.
+>  Antes de programar, fui **redator e professor**. Por isso gosto de código claro e de explicar soluções técnicas de um jeito que todo mundo entende.
 
 ---
 
@@ -75,7 +75,7 @@ const joao = {
 
 ---
 
-## 🚀 Projetos em destaque
+##  Projetos em destaque
 
 | Projeto | Descrição | Tecnologias |
 |---|---|---|
@@ -85,7 +85,7 @@ const joao = {
 
 ---
 
-## 📊 GitHub Analytics
+##  GitHub Analytics
 
 <div align="center">
 
