@@ -13,7 +13,7 @@
 
 ---
 
-##  Sobre mim
+## 👋 Sobre mim
 
 <table>
 <tr>
@@ -53,9 +53,9 @@ const joao = {
 </tr>
 </table>
 
->  *"Qualquer tolo escreve código que um computador entende. Bons programadores escrevem código que humanos entendem."* — **Martin Fowler**
+> *"Qualquer tolo escreve código que um computador entende. Bons programadores escrevem código que humanos entendem."* — **Martin Fowler**
 
->  Antes de programar, fui **redator e professor**. Por isso gosto de código claro e de explicar soluções técnicas de um jeito que todo mundo entende.
+> Antes de programar, fui **redator e professor**. Por isso gosto de código claro e de explicar soluções técnicas de um jeito que todo mundo entende.
 
 ---
 
@@ -75,17 +75,19 @@ const joao = {
 
 ---
 
-##  Projetos em destaque
+## 📂 Projetos em destaque
 
 | Projeto | Descrição | Tecnologias |
 |---|---|---|
-| **[Sistema-Academico](https://github.com/JNeves07/Sistema-Academico)** | Descreva aqui o que o sistema faz | `Tecnologia` `Tecnologia` |
-| **[pokedex](https://github.com/JNeves07/pokedex)** | Descreva aqui o que o projeto faz | `Tecnologia` `Tecnologia` |
-| **[Programa-o-em-Banco-de-dados](https://github.com/JNeves07/Programa-o-em-Banco-de-dados)** | Descreva aqui o que o projeto faz | `SQL` `Tecnologia` |
+| **[Sistema-Academico](https://github.com/JNeves07/Sistema-Academico)** | Sistema para organizar e controlar dados acadêmicos. | `PHP` `Laravel` `MySQL` |
+| **[pokedex](https://github.com/JNeves07/pokedex)** | Aplicação que lista e exibe informações de Pokémon. | `JavaScript` `APIs REST` |
+| **[Programa-o-em-Banco-de-dados](https://github.com/JNeves07/Programa-o-em-Banco-de-dados)** | Exercícios de modelagem e consultas SQL. | `SQL` `MySQL` |
+
+Veja todos os repositórios em [github.com/JNeves07](https://github.com/JNeves07?tab=repositories).
 
 ---
 
-##  GitHub Analytics
+## 📊 GitHub Analytics
 
 <div align="center">
 
@@ -100,6 +102,97 @@ const joao = {
 </div>
 
 ---
+
+# 📘 Documentação do repositório
+
+## Descrição
+
+Este é o repositório de perfil do GitHub de **João Marcelo Neves de Lima**. Além da apresentação pública acima, ele concentra uma pequena ferramenta em **Python 3.15** para validar e resumir, localmente, as informações do perfil: tecnologias, estatísticas, projetos e os cartões SVG gerados pela GitHub Action de perfil.
+
+Tudo funciona com a **biblioteca padrão do Python**: não é necessário instalar dependências com `pip`.
+
+## Tecnologias
+
+- **Python 3.15** (compatível com 3.13) — validação, resumo e testes com `unittest`.
+- **GitHub Actions** — testes contínuos e geração diária dos cartões de perfil.
+- **GitHub Profile Summary Cards** — action que produz os SVGs em `profile-summary-card-output/`.
+- **JSON** — fonte única e simples de verdade em `profile-config.json`, sem PyYAML.
+- **GitHub Pages** — portfólio publicado em [jneves07.github.io](https://jneves07.github.io).
+
+## Arquitetura
+
+```text
+profile-config.json                 Dados do perfil (nome, stack, stats, projetos, cards)
+        │
+        ▼
+tools/profile_summary.py            Carrega → valida → normaliza → resume
+        │                              │
+        │                              └── Verifica os SVGs do tema em
+        │                                  profile-summary-card-output/<theme>/
+        ▼
+tests/test_profile_summary.py       unittest: validação, resumo e JSON inválido
+        │
+        ▼
+.github/workflows/ci.yml             Python 3.13 e 3.15 no GitHub Actions
+```
+
+O fluxo é intencionalmente pequeno: `load_config()` lê o JSON com mensagens amigáveis, `validate_config()` devolve uma lista de problemas, `build_summary()` normaliza os dados e `format_summary()` prepara a saída para o terminal. A flag `--json` expõe o mesmo resumo de forma estruturada.
+
+> Os SVGs em `profile-summary-card-output/` são gerados por `.github/workflows/profile-summary-cards.yml`. Eles são preservados e não devem ser editados manualmente.
+
+## Como usar
+
+Execute os comandos na raiz do repositório:
+
+```bash
+# Valida a configuração e verifica se os cartões do tema existem
+python tools/profile_summary.py --validate
+
+# Mostra o resumo legível de tecnologias e estatísticas
+python tools/profile_summary.py --summary
+
+# Valida e resume ao mesmo tempo (comando padrão, sem flags)
+python tools/profile_summary.py
+
+# Resumo estruturado para outras ferramentas
+python tools/profile_summary.py --summary --json
+
+# Usa outro arquivo e ignora a checagem dos SVGs
+python tools/profile_summary.py --config outro-config.json --no-card-check
+```
+
+Para ajustar o perfil, edite `profile-config.json`. Campos obrigatórios: `username`, `name`, `role`, `technologies` e `stats`. Opcionais: `location`, `profile_url`, `portfolio_url`, `theme`, `featured_projects` e `cards`.
+
+## Como testar
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+A suíte cobre configuração válida, campos ausentes ou inválidos, cartões faltantes, resumo, saída em JSON, JSON corrompido e códigos de saída da CLI.
+
+## CI
+
+`.github/workflows/ci.yml` roda em *push* na branch `main`, em *pull requests* e manualmente. A matriz executa os testes e os comandos de validação/resumo no **Python 3.13 e 3.15**. O workflow de cartões continua separado, com agendamento diário às 03:00 (UTC-3) e execução manual.
+
+Nenhum segredo é armazenado no repositório: o `GITHUB_TOKEN` usado pelo workflow de cartões é fornecido automaticamente pelo GitHub Actions.
+
+## Estrutura
+
+```text
+.
+├── .github/
+│   └── workflows/
+│       ├── ci.yml                      # Testes e validação (3.13 e 3.15)
+│       └── profile-summary-cards.yml   # Geração dos SVGs (preservada)
+├── profile-summary-card-output/        # SVGs de todos os temas gerados
+├── profile-config.json                 # Configuração local do perfil
+├── tools/
+│   └── profile_summary.py              # CLI de validação e resumo
+├── tests/
+│   └── test_profile_summary.py         # Testes unittest
+└── README.md                           # Perfil + documentação
+```
 
 <div align="center">
 

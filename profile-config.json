@@ -1,0 +1,62 @@
+{
+  "username": "JNeves07",
+  "name": "João Marcelo Neves de Lima",
+  "role": "Desenvolvedor Back-End",
+  "location": "Caxias, MA - Brasil",
+  "profile_url": "https://github.com/JNeves07",
+  "portfolio_url": "https://jneves07.github.io",
+  "theme": "tokyonight",
+  "technologies": [
+    "PHP",
+    "Laravel",
+    "Python",
+    "C#",
+    ".NET",
+    "APIs REST",
+    "Docker",
+    "Docker Compose",
+    "MySQL",
+    "PostgreSQL",
+    "IoT",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "HTML5",
+    "CSS3",
+    "Linux",
+    "Nginx",
+    "Git",
+    "GitHub"
+  ],
+  "stats": {
+    "public_repos": 9,
+    "contributions_last_year": 31
+  },
+  "featured_projects": [
+    {
+      "name": "Sistema Acadêmico",
+      "description": "Sistema para organizar e controlar dados acadêmicos.",
+      "url": "https://github.com/JNeves07/Sistema-Academico",
+      "technologies": ["PHP", "Laravel", "MySQL"]
+    },
+    {
+      "name": "Pokédex",
+      "description": "Aplicação que lista e exibe informações de Pokémon.",
+      "url": "https://github.com/JNeves07/pokedex",
+      "technologies": ["JavaScript", "APIs REST"]
+    },
+    {
+      "name": "Programação em Banco de Dados",
+      "description": "Exercícios de modelagem e consultas SQL.",
+      "url": "https://github.com/JNeves07/Programa-o-em-Banco-de-dados",
+      "technologies": ["SQL", "MySQL"]
+    }
+  ],
+  "cards": [
+    "0-profile-details.svg",
+    "1-repos-per-language.svg",
+    "2-most-commit-language.svg",
+    "3-stats.svg",
+    "4-productive-time.svg"
+  ]
+}
