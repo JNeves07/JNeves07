@@ -79,9 +79,9 @@ const joao = {
 
 | Projeto | Descrição | Tecnologias |
 |---|---|---|
-| **[Sistema-Academico](https://github.com/JNeves07/Sistema-Academico)** | Sistema para organizar e controlar dados acadêmicos. | `PHP` `Laravel` `MySQL` |
-| **[pokedex](https://github.com/JNeves07/pokedex)** | Aplicação que lista e exibe informações de Pokémon. | `JavaScript` `APIs REST` |
-| **[Programa-o-em-Banco-de-dados](https://github.com/JNeves07/Programa-o-em-Banco-de-dados)** | Exercícios de modelagem e consultas SQL. | `SQL` `MySQL` |
+| **[Academia.NET](https://github.com/JNeves07/Academia.NET)** | Sistema para organizar e controlar dados acadêmicos. | `C#` `.NET` `xUnit` |
+| **[PokeDex-API](https://github.com/JNeves07/PokeDex-API)** | API REST que lista e exibe informações de Pokémon. | `PHP` `Laravel` `SQLite` |
+| **[SQL-Lab](https://github.com/JNeves07/SQL-Lab)** | Modelagem e consultas.sql em Laravel com query builder. | `PHP` `Laravel` `MySQL` |
 
 Veja todos os repositórios em [github.com/JNeves07](https://github.com/JNeves07?tab=repositories).
 
