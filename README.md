@@ -2,7 +2,7 @@
 
 ![Banner](https://capsule-render.vercel.app/api?type=waving&color=0:0A1F5C,50:2A4FC4,100:4169E1&height=240&section=header&text=João%20Marcelo&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=Back-End%20Developer%20%7C%20Engenharia%20de%20Software%20%7C%20PHP%20%C2%B7%20Laravel%20%C2%B7%20Docker&descSize=17&descAlignY=60&animation=fadeIn)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1200&color=5B7FEE&center=true&vCenter=true&width=620&lines=Back-End+com+PHP+%26+Laravel;Docker+%7C+APIs+%7C+Banco+de+Dados;Buscando+est%C3%A1gio+em+desenvolvimento+de+sistemas)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1200&color=5B7FEE&center=true&vCenter=true&width=620&lines=Back-End+com+PHP+%26+Laravel;Docker+%7C+APIs+%7C+Banco+de+Dados;Em+busca+de+est%C3%A1gio)](https://git.io/typing-svg)
 
 [![PORTFÓLIO](https://img.shields.io/badge/PORTFÓLIO-4169E1?style=for-the-badge&logo=githubpages&logoColor=white)](https://jneves07.github.io)
 [![LINKEDIN](https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joao-marcele-a30407336/)
@@ -40,7 +40,7 @@ const joao = {
 
   languages: ["PT 🇧🇷", "EN B1", "ES B1", "Libras"],
 
-  lookingFor: "Estágio em desenvolvimento",
+  lookingFor: "Em busca de estágio",
 };
 ```
 
